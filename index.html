@@ -12,6 +12,9 @@
 </head>
 <body>
 
+<!-- Scroll Progress -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
 <!-- ══════════════ NAVIGATION ══════════════ -->
 <nav class="top-nav" id="topNav">
     <div class="nav-inner">
@@ -44,6 +47,7 @@
 
     <!-- COVER -->
     <header class="cover">
+        <canvas id="particleCanvas" class="particle-canvas"></canvas>
         <div class="cover-decoration">
             <div class="cover-circle cover-circle-1"></div>
             <div class="cover-circle cover-circle-2"></div>
@@ -54,7 +58,7 @@
             <p class="cover-faculty">Khoa Khoa học Máy tính</p>
             <div class="cover-divider"></div>
             <span class="cover-badge">Bài Tập 3 — Báo Cáo Cá Nhân</span>
-            <h1 class="cover-title">Sử dụng Công cụ Hợp tác<br>Trực tuyến cho Dự án Nhóm</h1>
+            <h1 class="cover-title gradient-text">Sử dụng Công cụ Hợp tác<br>Trực tuyến cho Dự án Nhóm</h1>
             <p class="cover-course">Môn: Nhập môn Công nghệ số và Ứng dụng Trí tuệ Nhân tạo</p>
             <div class="cover-meta">
                 <div class="meta-card">
@@ -91,7 +95,7 @@
             <p>Vai trò của tôi trong nhóm là <strong>Tester & Reviewer</strong> — chịu trách nhiệm kiểm thử chức năng ứng dụng, review code từ Mạnh Nguyễn, đánh giá chất lượng từng phiên bản, và xác nhận trước khi chuyển task sang Done trên Trello.</p>
             <p>Để phối hợp làm việc, nhóm đã sử dụng <strong>4 công cụ hợp tác trực tuyến</strong> thuộc 3 nhóm khác nhau:</p>
 
-            <div class="tools-grid">
+            <div class="tools-grid reveal-stagger">
                 <div class="tool-card">
                     <div class="tool-icon-wrap trello">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M21 2H3a1 1 0 00-1 1v18a1 1 0 001 1h18a1 1 0 001-1V3a1 1 0 00-1-1zM10.5 18.5a1 1 0 01-1 1h-4a1 1 0 01-1-1v-13a1 1 0 011-1h4a1 1 0 011 1v13zm9-5a1 1 0 01-1 1h-4a1 1 0 01-1-1v-8a1 1 0 011-1h4a1 1 0 011 1v8z"/></svg>
@@ -139,7 +143,7 @@
         </div>
         <div class="section-content">
             <div class="timeline">
-                <div class="tl-item">
+                <div class="tl-item reveal-left">
                     <div class="tl-marker"></div>
                     <div class="tl-card">
                         <div class="tl-time">Giai đoạn 1 — 2:25 PM → 2:51 PM</div>
@@ -147,7 +151,7 @@
                         <p>Thu Huyền tạo Trello board và thông báo trên Slack #03_social. Tôi tham gia workspace và hỏi: <em>"yo I'm in too, what we doing first?"</em>. Huyền phân công task trên Trello — tôi nhận card <strong>"Test functionality"</strong> (gán avatar T, deadline Apr 15–17). Xác nhận vai trò: <em>"I'll test after u done, no rush"</em>. Huyền tạo Google Docs cho báo cáo nhóm và share link.</p>
                     </div>
                 </div>
-                <div class="tl-item">
+                <div class="tl-item reveal-left">
                     <div class="tl-marker"></div>
                     <div class="tl-card">
                         <div class="tl-time">Giai đoạn 2 — 2:52 PM → 3:09 PM</div>
@@ -155,7 +159,7 @@
                         <p>Xác nhận sẽ thêm testing results vào tài liệu: <em>"ok imma add testing results after"</em>. Huyền thông báo Drive folder đã sẵn sàng: <em>"Drive folder is up, upload EVERYTHING there"</em>. Khi Mạnh bắt đầu code, tôi chủ động nhắc nhở: <em>"update progress regularly ok. I'm watching u 👀"</em>.</p>
                     </div>
                 </div>
-                <div class="tl-item">
+                <div class="tl-item reveal-left">
                     <div class="tl-marker"></div>
                     <div class="tl-card">
                         <div class="tl-time">Giai đoạn 3 — 3:08 PM → 4:07 PM</div>
@@ -163,7 +167,7 @@
                         <p>Mạnh upload bản <code>index.html</code> basic lên Drive và attach vào Trello card. Tôi nhận file và bắt đầu kiểm thử: <em>"Got it. I'll test the current flow first so we know what still needs fixing."</em> Sau khi test, đánh giá bản đầu: <em>"looks clean so far. the layout opens fine.. but for now its just basic structure right?"</em></p>
                     </div>
                 </div>
-                <div class="tl-item">
+                <div class="tl-item reveal-left">
                     <div class="tl-marker"></div>
                     <div class="tl-card">
                         <div class="tl-time">Giai đoạn 4 — 4:11 PM → 4:30 PM</div>
@@ -171,7 +175,7 @@
                         <p>Mạnh upload bản updated lên Drive + Trello. Tôi kiểm tra ngay: <em>"Niceee, I'm checking the latest one now 👀"</em>. Đưa ra nhận xét chi tiết: <em>"this version is better. The page looks more complete now, the task input flow also is clearer. Much better than the first upload. Good job @Mạnh Nguyễn"</em>.</p>
                     </div>
                 </div>
-                <div class="tl-item">
+                <div class="tl-item reveal-left">
                     <div class="tl-marker"></div>
                     <div class="tl-card">
                         <div class="tl-time">Giai đoạn 5 — 4:31 PM → 4:51 PM</div>
@@ -179,7 +183,7 @@
                         <p>Xác nhận với đội đồng ý chuyển card sang Done: <em>"From my side, yep definitely. For this stage, it's good. I don't see anything blocking rn :)"</em>. Huyền chuyển card "Code HTML structure" sang Done. Tôi tiếp tục sẵn sàng hỗ trợ: <em>"okela, send me a ping when u need any check"</em>.</p>
                     </div>
                 </div>
-                <div class="tl-item">
+                <div class="tl-item reveal-left">
                     <div class="tl-marker"></div>
                     <div class="tl-card">
                         <div class="tl-time">Giai đoạn 6 — 4:59 PM → 5:09 PM</div>
@@ -203,7 +207,7 @@
         <div class="section-content">
 
             <!-- Trello -->
-            <div class="analysis-block">
+            <div class="analysis-block reveal">
                 <h3 class="analysis-tool-name">
                     <span class="dot trello-dot"></span> Trello — Quản lý dự án
                 </h3>
@@ -230,7 +234,7 @@
             </div>
 
             <!-- Slack -->
-            <div class="analysis-block">
+            <div class="analysis-block reveal">
                 <h3 class="analysis-tool-name">
                     <span class="dot slack-dot"></span> Slack — Giao tiếp nhóm
                 </h3>
@@ -257,7 +261,7 @@
             </div>
 
             <!-- Drive + Docs -->
-            <div class="analysis-block">
+            <div class="analysis-block reveal">
                 <h3 class="analysis-tool-name">
                     <span class="dot drive-dot"></span> Google Drive & Docs — Lưu trữ & Soạn thảo
                 </h3>
@@ -294,7 +298,7 @@
             </div>
         </div>
         <div class="section-content">
-            <div class="challenge">
+            <div class="challenge reveal">
                 <div class="challenge-header">
                     <span class="challenge-num">1</span>
                     <h4>Quản lý phiên bản file khi có nhiều bản upload</h4>
@@ -305,7 +309,7 @@
                     <p>Nhóm thống nhất quy trình rõ ràng: <strong>upload Drive trước → attach Trello card → thông báo Slack</strong>. Bản mới nhất luôn là bản cuối cùng được attach. Thu Huyền hỏi xác nhận trước khi chuyển Done: <em>"do we agree this is the working version we're keeping?"</em>. Mạnh cũng ghi note trên Slack: <em>"Same name in Drive, but this one is the newer version. I also added it to Trello too"</em>.</p>
                 </div>
             </div>
-            <div class="challenge">
+            <div class="challenge reveal">
                 <div class="challenge-header">
                     <span class="challenge-num">2</span>
                     <h4>Đồng bộ thông tin giữa 4 công cụ</h4>
@@ -316,7 +320,7 @@
                     <p>Tôi chủ động nhắc nhở đồng đội: <em>"update progress regularly ok"</em>. Huyền hướng dẫn workflow chuẩn: <em>"When u upload the new file, put it in Drive first, then attach it to Trello too. Easier to track everything there."</em> Đồng thời, Huyền cũng yêu cầu: <em>"Can u both make sure the final materials are all inside the Drive folder? I want everything in one place 🙂"</em>.</p>
                 </div>
             </div>
-            <div class="challenge">
+            <div class="challenge reveal">
                 <div class="challenge-header">
                     <span class="challenge-num">3</span>
                     <h4>Ranh giới vai trò trong nhóm nhỏ 3 người</h4>
@@ -342,7 +346,7 @@
         <div class="section-content">
             <p>Qua bài tập này, tôi đã trải nghiệm thực tế việc sử dụng <strong>4 công cụ hợp tác trực tuyến</strong> thuộc 3 nhóm khác nhau để phối hợp làm việc nhóm hiệu quả. Mỗi công cụ có thế mạnh riêng, và khi kết hợp một cách có hệ thống, năng suất làm việc nhóm được nâng cao đáng kể.</p>
 
-            <div class="lessons-grid">
+            <div class="lessons-grid reveal-stagger">
                 <div class="lesson-card">
                     <div class="lesson-icon">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
@@ -380,7 +384,7 @@
                 </div>
             </div>
 
-            <div class="summary-box">
+            <div class="summary-box reveal-scale">
                 <p><strong>Tổng kết:</strong> Trong suốt quá trình thực hiện dự án, tôi đã tham gia <strong>hơn 20 lượt tương tác</strong> trên Slack (nhắn tin, reaction, review), <strong>theo dõi và xác nhận</strong> nhiều lần trên Trello (từ Doing → Done), kiểm tra file trên Drive và review tài liệu trên Google Docs. Vai trò Tester & Reviewer cho phép tôi đóng góp trực tiếp vào chất lượng sản phẩm cuối cùng — ứng dụng TaskFlow Todo App hoàn chỉnh với giao diện aurora theme, hệ thống priority, và tích hợp localStorage.</p>
             </div>
         </div>
@@ -635,13 +639,36 @@ navTabs.forEach(tab => {
     });
 });
 
-/* ── Sticky Nav ── */
+/* ── Sticky Nav + Scroll Progress ── */
 const nav = document.getElementById('topNav');
+const progressBar = document.getElementById('scrollProgress');
+
 window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 10);
+    // Scroll progress
+    const winH = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = winH > 0 ? (window.scrollY / winH) * 100 : 0;
+    progressBar.style.width = pct + '%';
+}, { passive: true });
+
+/* ── Scroll Reveal (IntersectionObserver) ── */
+const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-scale, .reveal-stagger');
+
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.12,
+    rootMargin: '0px 0px -40px 0px'
 });
 
-/* ── Evidence Filters ── */
+revealEls.forEach(el => revealObserver.observe(el));
+
+/* ── Evidence Filters with animation ── */
 const evFilters = document.querySelectorAll('.ev-filter');
 const evCards = document.querySelectorAll('.ev-card');
 
@@ -650,11 +677,15 @@ evFilters.forEach(btn => {
         const filter = btn.dataset.filter;
         evFilters.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        evCards.forEach(card => {
-            if (filter === 'all' || card.dataset.tool === filter) {
+
+        evCards.forEach((card, i) => {
+            const show = filter === 'all' || card.dataset.tool === filter;
+            if (show) {
                 card.style.display = '';
+                card.style.animation = `fadeInUp .4s ${i * .04}s both`;
             } else {
                 card.style.display = 'none';
+                card.style.animation = '';
             }
         });
     });
@@ -686,6 +717,169 @@ document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLight
 function closeLightbox() {
     lightbox.classList.remove('active');
     document.body.style.overflow = '';
+}
+
+/* ── Inject fadeInUp keyframe ── */
+const style = document.createElement('style');
+style.textContent = `
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+`;
+document.head.appendChild(style);
+
+/* ═══════════════ PARTICLE SYSTEM ═══════════════ */
+const canvas = document.getElementById('particleCanvas');
+if (canvas) {
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    const PARTICLE_COUNT = 40;
+
+    function resizeCanvas() {
+        const cover = canvas.parentElement;
+        canvas.width = cover.offsetWidth;
+        canvas.height = cover.offsetHeight;
+    }
+
+    function createParticle() {
+        return {
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            size: Math.random() * 2.5 + .5,
+            speedX: (Math.random() - .5) * .3,
+            speedY: (Math.random() - .5) * .3,
+            opacity: Math.random() * .25 + .05,
+            pulse: Math.random() * Math.PI * 2,
+            pulseSpeed: Math.random() * .015 + .005
+        };
+    }
+
+    function initParticles() {
+        particles = [];
+        for (let i = 0; i < PARTICLE_COUNT; i++) {
+            particles.push(createParticle());
+        }
+    }
+
+    function drawParticles() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        particles.forEach((p, i) => {
+            p.x += p.speedX;
+            p.y += p.speedY;
+            p.pulse += p.pulseSpeed;
+            const currentOpacity = p.opacity * (.6 + Math.sin(p.pulse) * .4);
+
+            // Wrap around screen
+            if (p.x < -10) p.x = canvas.width + 10;
+            if (p.x > canvas.width + 10) p.x = -10;
+            if (p.y < -10) p.y = canvas.height + 10;
+            if (p.y > canvas.height + 10) p.y = -10;
+
+            // Draw particle
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(74, 103, 65, ${currentOpacity})`;
+            ctx.fill();
+
+            // Draw connections
+            for (let j = i + 1; j < particles.length; j++) {
+                const dx = p.x - particles[j].x;
+                const dy = p.y - particles[j].y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < 120) {
+                    ctx.beginPath();
+                    ctx.moveTo(p.x, p.y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.strokeStyle = `rgba(74, 103, 65, ${.04 * (1 - dist / 120)})`;
+                    ctx.lineWidth = .5;
+                    ctx.stroke();
+                }
+            }
+        });
+
+        requestAnimationFrame(drawParticles);
+    }
+
+    resizeCanvas();
+    initParticles();
+    drawParticles();
+    window.addEventListener('resize', () => { resizeCanvas(); initParticles(); });
+}
+
+/* ═══════════════ 3D TILT EFFECT ═══════════════ */
+document.querySelectorAll('.tool-card, .meta-card, .lesson-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = (y - centerY) / centerY * -4;
+        const rotateY = (x - centerX) / centerX * 4;
+        card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+    });
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+        card.style.transition = 'transform .4s ease';
+        setTimeout(() => card.style.transition = '', 400);
+    });
+});
+
+/* ═══════════════ SECTION HEADING REVEAL ═══════════════ */
+const headings = document.querySelectorAll('.section-heading');
+const headingObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            headingObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+headings.forEach(h => headingObserver.observe(h));
+
+/* ═══════════════ COVER PARALLAX ═══════════════ */
+const cover = document.querySelector('.cover');
+if (cover) {
+    window.addEventListener('scroll', () => {
+        const scrolled = window.scrollY;
+        if (scrolled < window.innerHeight) {
+            const circles = cover.querySelectorAll('.cover-circle');
+            circles.forEach((c, i) => {
+                const speed = .02 + i * .015;
+                c.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+            const content = cover.querySelector('.cover-content');
+            if (content) {
+                content.style.transform = `translateY(${scrolled * .12}px)`;
+                content.style.opacity = 1 - scrolled / (window.innerHeight * .8);
+            }
+        }
+    }, { passive: true });
+}
+
+/* ═══════════════ CURSOR GLOW (COVER ONLY) ═══════════════ */
+if (cover) {
+    const glow = document.createElement('div');
+    glow.style.cssText = `
+        position: fixed; pointer-events: none; z-index: 3;
+        width: 200px; height: 200px; border-radius: 50%;
+        background: radial-gradient(circle, rgba(74,103,65,.06) 0%, transparent 70%);
+        transform: translate(-50%, -50%);
+        transition: opacity .3s ease;
+        opacity: 0;
+    `;
+    document.body.appendChild(glow);
+
+    cover.addEventListener('mousemove', (e) => {
+        glow.style.left = e.clientX + 'px';
+        glow.style.top = e.clientY + 'px';
+        glow.style.opacity = '1';
+    });
+    cover.addEventListener('mouseleave', () => {
+        glow.style.opacity = '0';
+    });
 }
 </script>
 
