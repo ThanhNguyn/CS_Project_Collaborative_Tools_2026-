@@ -5,6 +5,7 @@
   const FILES = [
     { name: 'index.html', path: 'index.html', type: 'file' },
     { name: 'report.css', path: 'report.css', type: 'file' },
+    { name: 'README.md', path: 'README.md', type: 'file' },
     {
       name: 'Todo_App_Project',
       type: 'directory',
