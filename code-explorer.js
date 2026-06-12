@@ -5,6 +5,7 @@
   const FILES = [
     { name: 'index.html', path: 'index.html', type: 'file' },
     { name: 'report.css', path: 'report.css', type: 'file' },
+    { name: 'code-explorer.js', path: 'code-explorer.js', type: 'file' },
     { name: 'README.md', path: 'README.md', type: 'file' },
     {
       name: 'Todo_App_Project',
@@ -277,7 +278,8 @@
       /* Editor container */
       .ce-editor-container {
         flex: 1;
-        overflow: auto;
+        overflow-y: auto;
+        overflow-x: hidden;
         display: flex;
         padding: 15px;
         position: relative;
@@ -297,8 +299,10 @@
         margin: 0;
         padding: 0;
         flex: 1;
+        min-width: 0;
         background: transparent !important;
-        overflow: visible;
+        overflow-x: auto;
+        white-space: pre !important;
       }
       .ce-editor-container code {
         font-family: 'JetBrains Mono', monospace !important;
@@ -306,6 +310,7 @@
         line-height: 1.5 !important;
         background: transparent !important;
         padding: 0 !important;
+        white-space: pre !important;
       }
       
       /* Image Rendering */
